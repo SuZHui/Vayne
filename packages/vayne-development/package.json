@@ -1,0 +1,17 @@
+{
+  "name": "vayne-development",
+  "version": "0.0.1",
+  "description": "vayne-development",
+  "main": "index.js",
+  "dependencies": {
+    "@suzh/build-tool": "0.0.1"
+  },
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "Suzh",
+  "license": "MIT"
+}
