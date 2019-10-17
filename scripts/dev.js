@@ -1,10 +1,9 @@
 const execa = require('execa')
 
 execa(
-  'lerna',
+  'node',
   [
-    'run',
-    'dev'
+    'packages/vayne-development/index.js',
   ],
   {
     stdio: 'inherit'

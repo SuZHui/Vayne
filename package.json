@@ -9,6 +9,6 @@
     "lerna": "^3.16.4"
   },
   "scripts": {
-    "dev": "lerna run dev"
+    "dev": "node scripts/dev.js"
   }
 }
