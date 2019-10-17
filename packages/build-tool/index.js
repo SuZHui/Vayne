@@ -1,16 +1,12 @@
 const webpack = require('webpack')
+const merge = require('webpack-merge')
+const devConfig = require('./webpack.config.dev')
 
-function dev(entry = '', outputDir = '/dist') {
-  const config = webpack({
-    mode: 'development',
-    entry: [entry],
-    output: {
-      path: outputDir,
-      publicPath: '/',
-      filename: 'build.js'
-    }
-  })
-  config.run((err, stats) => {
+function dev(webpackConfig = {}) {
+  const config = merge(devConfig, webpackConfig)
+  const complier = webpack(config)
+  
+  complier.run((err, stats) => {
     if (err) {
       console.error(err)
       return
