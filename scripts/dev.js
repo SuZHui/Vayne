@@ -1,11 +1,14 @@
 const execa = require('execa')
-
+console.log(process.cwd())
 execa(
-  'node',
+  'lerna',
   [
-    'packages/vayne-development/index.js',
+    'run',
+    'dev',
+    '--stream',
   ],
   {
-    stdio: 'inherit'
+    stdio: 'inherit',
+    execPath: process.cwd()
   }
 )

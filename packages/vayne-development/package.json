@@ -2,12 +2,14 @@
   "name": "vayne-development",
   "version": "0.0.1",
   "description": "vayne-development",
-  "main": "index.js",
+  "main": "dev.js",
   "dependencies": {
-    "@suzh/build-tool": "0.0.1"
+    "@suzh/build-tool": "0.0.1",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
   },
   "scripts": {
-    "dev": "node index.js"
+    "dev": "node dev.js"
   },
   "keywords": [
     "vue"

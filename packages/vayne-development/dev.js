@@ -1,3 +1,4 @@
+const path = require('path')
 const buildTool = require('@suzh/build-tool')
 
 const ROOT_DIR = __dirname
@@ -8,5 +9,11 @@ buildTool.dev({
     path: `${ROOT_DIR}/dist`,
     publicPath: '/',
     filename: 'build.js'
-  }
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.vue'],
+    alias: {
+      '@': ROOT_DIR
+    }
+  },
 })

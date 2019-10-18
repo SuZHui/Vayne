@@ -19,7 +19,7 @@ module.exports = function (webpackConfig = {}) {
   // })
 
   const server = new WebpackDevServer(complier, {
-    open: true,
+    open: false,
     hot: true,
     inline: true,
     compress: true,
