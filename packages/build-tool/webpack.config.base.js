@@ -1,4 +1,5 @@
 const path = require('path')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const BABEL_CONFIG = {
   presets: [
@@ -21,9 +22,7 @@ const BABEL_CONFIG = {
     // ]
   ],
   plugins: [
-    // 'transform-vue-jsx',
     '@babel/plugin-transform-runtime',
-    // '@babel/plugin-syntax-jsx'
   ]
 }
 
@@ -37,6 +36,20 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            js: [
+              {
+                loader: 'babel-loader',
+                options: BABEL_CONFIG
+              }
+            ]
+          }
+        },
+      },
+      {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
@@ -47,5 +60,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.vue']
   },
-  plugins: []
+  plugins: [
+    new VueLoaderPlugin()
+  ]
 }

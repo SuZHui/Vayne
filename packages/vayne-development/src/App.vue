@@ -1,3 +1,4 @@
+<script>
 export default {
   data() {
     return {
@@ -8,3 +9,4 @@ export default {
     return (<div>{this.title}</div>)
   }
 }
+</script>

@@ -3,12 +3,12 @@ const buildTool = require('@suzh/build-tool')
 
 const ROOT_DIR = __dirname
 
-buildTool.dev({
+buildTool.build({
   entry: [
     `${ROOT_DIR}/src/main.js` 
   ],
   output: {
-    path: `${ROOT_DIR}/dist/js/`,
+    path: `${ROOT_DIR}/dist/js`,
     publicPath: '/',
     filename: 'build.js'
   },
