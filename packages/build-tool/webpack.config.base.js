@@ -2,27 +2,28 @@ const path = require('path')
 
 const BABEL_CONFIG = {
   presets: [
-    [
-      '@babel/preset-env',
-      { 
-        modules: false,
-        targets: { 
-          browsers:
-            [ 'last 2 versions',
-              'Firefox ESR',
-              '> 1%',
-              'ie >= 9',
-              'iOS >= 8',
-              'Android >= 4' 
-            ] 
-        } 
-      }
-    ]
+    '@vue/babel-preset-jsx',
+    // [
+    //   '@babel/preset-env',
+    //   { 
+    //     modules: false,
+    //     targets: { 
+    //       browsers:
+    //         [ 'last 2 versions',
+    //           'Firefox ESR',
+    //           '> 1%',
+    //           'ie >= 9',
+    //           'iOS >= 8',
+    //           'Android >= 4' 
+    //         ] 
+    //     } 
+    //   }
+    // ]
   ],
   plugins: [
-    'transform-vue-jsx',
+    // 'transform-vue-jsx',
     '@babel/plugin-transform-runtime',
-    '@babel/plugin-syntax-jsx'
+    // '@babel/plugin-syntax-jsx'
   ]
 }
 

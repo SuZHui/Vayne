@@ -9,7 +9,6 @@
     "lerna": "^3.16.4"
   },
   "scripts": {
-    "dev": "node scripts/dev.js",
-    "dev2": "lerna run dev --stream"
+    "dev": "node scripts/dev.js"
   }
 }
