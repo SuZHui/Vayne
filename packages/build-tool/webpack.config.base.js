@@ -1,5 +1,6 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 const BABEL_CONFIG = {
   presets: [
@@ -23,16 +24,17 @@ const BABEL_CONFIG = {
   ],
   plugins: [
     '@babel/plugin-transform-runtime',
+    '@babel/plugin-syntax-dynamic-import'
   ]
 }
 
 module.exports = {
   mode: 'production',
-  output: {
-    path: path.join(__dirname, '/dist'),
-    publicPath: '/',
-    filename: 'build.js'
-  },
+  // output: {
+  //   path: path.join(__dirname, '/dist'),
+  //   publicPath: '/',
+  //   filename: '[chunk].js'
+  // },
   module: {
     rules: [
       {
@@ -50,6 +52,19 @@ module.exports = {
         },
       },
       {
+        test: /\.scss$/,
+        use: [
+          { 
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development'
+            }
+          },
+          'css-loader',
+          { loader: 'sass-loader' }
+        ]
+      },
+      {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
@@ -57,10 +72,11 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    extensions: ['.js', '.jsx', '.vue']
-  },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[name].[id].css'
+    })
   ]
 }

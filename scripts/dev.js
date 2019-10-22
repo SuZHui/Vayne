@@ -1,5 +1,5 @@
 const execa = require('execa')
-console.log(process.cwd())
+
 execa(
   'lerna',
   [

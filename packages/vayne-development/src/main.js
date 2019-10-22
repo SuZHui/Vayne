@@ -1,9 +1,13 @@
 import Vue from 'vue'
 
-import App from '@/src/App'
+import App from '@/App'
+import router from './router'
+
+import '@/style/common.scss'
 
 new Vue({
   el: '#app',
+  router,
   render: h => h(App)
 })
 

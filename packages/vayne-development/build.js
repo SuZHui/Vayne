@@ -8,14 +8,14 @@ buildTool.build({
     `${ROOT_DIR}/src/main.js` 
   ],
   output: {
-    path: `${ROOT_DIR}/dist/js`,
+    path: `${ROOT_DIR}/dist`,
     publicPath: '/',
-    filename: 'build.js'
+    filename: 'js/[name].js'
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.vue'],
+    extensions: ['.js', '.jsx', '.vue', '.scss'],
     alias: {
-      '@': ROOT_DIR
+      '@': path.join(ROOT_DIR, '/src')
     }
   },
 })
