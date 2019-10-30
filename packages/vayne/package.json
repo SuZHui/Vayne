@@ -1,0 +1,34 @@
+{
+  "name": "vayne",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config build/webpack.config.dev.js --hot"
+  },
+  "keywords": [
+    "vayne"
+  ],
+  "author": "Suzh",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@types/node": "^12.12.0",
+    "autoprefixer": "^9.7.0",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.23.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.2.1",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.10"
+  }
+}

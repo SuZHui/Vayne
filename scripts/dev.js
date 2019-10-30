@@ -1,14 +1,16 @@
 const execa = require('execa')
 
 execa(
-  'lerna',
+  'yarn',
   [
+    'lerna',
     'run',
     'dev',
+    '--scope',
+    'vayne',
     '--stream',
   ],
   {
-    stdio: 'inherit',
-    execPath: process.cwd()
+    stdio: 'inherit'
   }
 )
