@@ -6,18 +6,18 @@ const BABEL_CONFIG = {
     '@vue/babel-preset-jsx',
     // [
     //   '@babel/preset-env',
-    //   { 
+    //   {
     //     modules: false,
-    //     targets: { 
+    //     targets: {
     //       browsers:
     //         [ 'last 2 versions',
     //           'Firefox ESR',
     //           '> 1%',
     //           'ie >= 9',
     //           'iOS >= 8',
-    //           'Android >= 4' 
-    //         ] 
-    //     } 
+    //           'Android >= 4'
+    //         ]
+    //     }
     //   }
     // ]
   ],
@@ -28,7 +28,7 @@ const BABEL_CONFIG = {
 }
 
 const cssLoaders = [
-  { 
+  {
     loader: MiniCssExtractPlugin.loader,
     options: {
       hmr: process.env.NODE_ENV === 'development'
@@ -40,7 +40,7 @@ const cssLoaders = [
 
 const scssLoaders = [
   ...cssLoaders,
-  { 
+  {
     loader: 'sass-loader',
     options: {
       implementation: require('sass'),
@@ -52,7 +52,7 @@ const scssLoaders = [
 module.exports = {
   mode: 'production',
   resolve: {
-    extensions: ['*', '.js', '.json', '.vue', '.ts']
+    extensions: ['*', '.js', '.json', '.vue', '.ts', '.tsx']
   },
   // output: {
   //   path: path.join(__dirname, '/dist'),

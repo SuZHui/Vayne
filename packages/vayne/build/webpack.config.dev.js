@@ -28,15 +28,15 @@ module.exports = merge(baseWebpackConfig, {
         loader: 'vue-loader',
       },
       {
-        test: /\.ts$/,
+        test: /\.t(s|sx)$/,
         use: [
           'babel-loader',
-          {
-            loader: 'ts-loader',
-            options: {
-              appendTsSuffixTo: [/\.vue$/],
-            }
-          },
+          // {
+          //   loader: 'ts-loader',
+          //   options: {
+          //     appendTsSuffixTo: [/\.vue$/],
+          //   }
+          // },
           // TODO: add eslint loader
         ],
         exclude: /node_modules/

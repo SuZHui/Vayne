@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App'
+import Vayne from 'vayne'
 
 Vue.config.performance = true
 
-import Vayne from 'vayne'
-Vayne()
+Vue.use(Vayne)
 
 const vm = new Vue({
   data: () => ({ isLoaded: document.readyState === 'complete' }),
