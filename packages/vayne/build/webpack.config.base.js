@@ -52,7 +52,10 @@ const scssLoaders = [
 module.exports = {
   mode: 'production',
   resolve: {
-    extensions: ['*', '.js', '.json', '.vue', '.ts', '.tsx']
+    extensions: ['*', '.js', '.json', '.vue', '.ts', '.tsx'],
+    alias: {
+      '@': path.resolve(__dirname, '../src')
+    }
   },
   // output: {
   //   path: path.join(__dirname, '/dist'),

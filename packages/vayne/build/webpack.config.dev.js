@@ -28,7 +28,7 @@ module.exports = merge(baseWebpackConfig, {
         loader: 'vue-loader',
       },
       {
-        test: /\.t(s|sx)$/,
+        test: /\.tsx?$/,
         use: [
           'babel-loader',
           // {

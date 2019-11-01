@@ -1,4 +1,5 @@
 import Vue, { VNode } from 'vue'
+import Popup from '@/internal/popup'
 
 const Dropdown = Vue.component(
   'v-dropdown',
@@ -24,7 +25,7 @@ const Dropdown = Vue.component(
        * if there are more than one child element, only the first one is shown
        * 渲染子元素，如果存在多个子元素，则只显示第一个
        */
-      renderChildren() {
+      renderChildren(): VNode | undefined {
         const children = this.$slots.default && this.$slots.default[0]
         const { _visible } = this
         return _visible && children
@@ -36,6 +37,7 @@ const Dropdown = Vue.component(
       return (
         <div>
           {this.renderChildren()}
+          <Popup></Popup>
         </div>
       )
     }
