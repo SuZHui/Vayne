@@ -7,6 +7,7 @@
     "dev": "webpack-dev-server --config build/webpack.config.dev.js --hot"
   },
   "keywords": [
+    "vue",
     "vayne"
   ],
   "author": "Suzh",
