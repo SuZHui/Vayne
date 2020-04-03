@@ -1,5 +1,5 @@
 import Vue, { VNode } from 'vue'
-import Portal from '@/internal/portal'
+import Portal from '@/ui/internal/portal'
 
 interface PopupData {
   _container: null | HTMLElement,
@@ -47,7 +47,7 @@ const Popup = Vue.component<PopupData, any, any, any>('vi-popup', {
     const { _visible, _container } = this
     return (
       <Portal container={_container}>
-        <div>This is inside Portal</div>
+        <div>TEST: This is inside Portal</div>
       </Portal>
       )
   }

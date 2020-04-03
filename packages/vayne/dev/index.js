@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import Vayne from 'vayne'
+import Vayne from 'vayne/ui'
 
 Vue.config.performance = true
 

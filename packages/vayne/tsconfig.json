@@ -6,7 +6,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
+      "@/ui/*": ["src/ui/*"],
+      "@/structure/*": ["src/structure/*"],
       "@/test/*": ["test/*"]
     }
   }

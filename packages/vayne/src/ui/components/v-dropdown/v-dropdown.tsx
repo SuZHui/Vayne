@@ -1,5 +1,5 @@
 import Vue, { VNode } from 'vue'
-import Popup from '@/internal/popup'
+import Popup from '@/ui/internal/popup'
 
 const Dropdown = Vue.component(
   'v-dropdown',
